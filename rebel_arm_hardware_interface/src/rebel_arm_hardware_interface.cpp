@@ -33,6 +33,13 @@ namespace rebel_arm_hardware_interface
         serialPortConfig.baudRate = std::stoi(info.hardware_parameters.at("baud_rate"));
         serialPortConfig.timeout = std::stoi(info.hardware_parameters.at("timeout"));
 
+        rebel_arm_joint1 = RebelArmJoint(info.hardware_parameters.at("position1_joint_name"));
+        rebel_arm_joint2 = RebelArmJoint(info.hardware_parameters.at("position2_joint_name"));
+        rebel_arm_joint3 = RebelArmJoint(info.hardware_parameters.at("position3_joint_name"));
+        rebel_arm_joint4 = RebelArmJoint(info.hardware_parameters.at("position4_joint_name"));
+        rebel_arm_joint5 = RebelArmJoint(info.hardware_parameters.at("position5_joint_name"));
+        rebel_arm_joint6 = RebelArmJoint(info.hardware_parameters.at("position6_joint_name"));
+
         for (const hardware_interface::ComponentInfo & joint : info.joints)
         {
             if (joint.command_interfaces.size() != 1)
@@ -81,12 +88,26 @@ namespace rebel_arm_hardware_interface
     {
         std::vector<hardware_interface::StateInterface> state_interfaces;
 
+        state_interfaces.emplace_back(hardware_interface::StateInterface(rebel_arm_joint1.name, hardware_interface::HW_IF_POSITION, &rebel_arm_joint1.position));
+        state_interfaces.emplace_back(hardware_interface::StateInterface(rebel_arm_joint2.name, hardware_interface::HW_IF_POSITION, &rebel_arm_joint2.position));
+        state_interfaces.emplace_back(hardware_interface::StateInterface(rebel_arm_joint3.name, hardware_interface::HW_IF_POSITION, &rebel_arm_joint3.position));
+        state_interfaces.emplace_back(hardware_interface::StateInterface(rebel_arm_joint4.name, hardware_interface::HW_IF_POSITION, &rebel_arm_joint4.position));
+        state_interfaces.emplace_back(hardware_interface::StateInterface(rebel_arm_joint5.name, hardware_interface::HW_IF_POSITION, &rebel_arm_joint5.position));
+        state_interfaces.emplace_back(hardware_interface::StateInterface(rebel_arm_joint6.name, hardware_interface::HW_IF_POSITION, &rebel_arm_joint6.position));
+
         return state_interfaces;
     }
 
     std::vector<hardware_interface::CommandInterface> RebelArmHardwareInterface::export_command_interfaces()
     {
         std::vector<hardware_interface::CommandInterface> command_interfaces;
+
+        command_interfaces.emplace_back(hardware_interface::CommandInterface(rebel_arm_joint1.name, hardware_interface::HW_IF_VELOCITY, &rebel_arm_joint1.command));
+        command_interfaces.emplace_back(hardware_interface::CommandInterface(rebel_arm_joint2.name, hardware_interface::HW_IF_VELOCITY, &rebel_arm_joint2.command));
+        command_interfaces.emplace_back(hardware_interface::CommandInterface(rebel_arm_joint3.name, hardware_interface::HW_IF_VELOCITY, &rebel_arm_joint3.command));
+        command_interfaces.emplace_back(hardware_interface::CommandInterface(rebel_arm_joint4.name, hardware_interface::HW_IF_VELOCITY, &rebel_arm_joint4.command));
+        command_interfaces.emplace_back(hardware_interface::CommandInterface(rebel_arm_joint5.name, hardware_interface::HW_IF_VELOCITY, &rebel_arm_joint5.command));
+        command_interfaces.emplace_back(hardware_interface::CommandInterface(rebel_arm_joint6.name, hardware_interface::HW_IF_VELOCITY, &rebel_arm_joint6.command));
 
         return command_interfaces;
     }
@@ -119,6 +140,16 @@ namespace rebel_arm_hardware_interface
     hardware_interface::return_type RebelArmHardwareInterface::write(const rclcpp::Time &, const rclcpp::Duration &)
     {
         return hardware_interface::return_type::OK;
+    }
+
+    void RebelArmHardwareInterface::rebelArmFeedbackCallback(RebelArmFeedback rebelArmFeedback) 
+    {
+        rebel_arm_joint1.updatePosition(rebelArmFeedback.joint1_position);
+        rebel_arm_joint2.updatePosition(rebelArmFeedback.joint2_position);
+        rebel_arm_joint3.updatePosition(rebelArmFeedback.joint3_position);
+        rebel_arm_joint4.updatePosition(rebelArmFeedback.joint4_position);
+        rebel_arm_joint5.updatePosition(rebelArmFeedback.joint5_position);
+        rebel_arm_joint6.updatePosition(rebelArmFeedback.joint6_position);
     }
 }
 

@@ -22,6 +22,7 @@
 #include "pluginlib/class_list_macros.hpp"
 
 #include "serial_port_service.hpp"
+#include "rebel_arm_joint.hpp"
 
 namespace rebel_arm_hardware_interface
 {
@@ -65,7 +66,7 @@ namespace rebel_arm_hardware_interface
 
         hardware_interface::return_type write(const rclcpp::Time &, const rclcpp::Duration &) override;
 
-        // void feedbackCallback(MotorWheelFeedback);
+        void rebelArmFeedbackCallback(RebelArmFeedback);
 
         private:
 
@@ -73,5 +74,12 @@ namespace rebel_arm_hardware_interface
 
         HardwareConfig hardwareConfig;
         SerialPortConfig serialPortConfig;
+
+        RebelArmJoint rebel_arm_joint1;
+        RebelArmJoint rebel_arm_joint2;
+        RebelArmJoint rebel_arm_joint3;
+        RebelArmJoint rebel_arm_joint4;
+        RebelArmJoint rebel_arm_joint5;
+        RebelArmJoint rebel_arm_joint6;
     };
 }
