@@ -114,20 +114,29 @@ namespace rebel_arm_hardware_interface
 
     hardware_interface::CallbackReturn RebelArmHardwareInterface::on_configure(const rclcpp_lifecycle::State &)
     {
-        if (!serialPortService.connect(serialPortConfig.device, serialPortConfig.baudRate, serialPortConfig.timeout))
-        {
-            return hardware_interface::CallbackReturn::ERROR;
-        }
+        RCLCPP_INFO(rclcpp::get_logger("RebelArmHardwareInterface"), "Configuring... please wait a moment...");
 
-        serialPortService.BindRebelArmFeedbackCallback(
-            std::bind(&RebelArmHardwareInterface::rebelArmFeedbackCallback, this, std::placeholders::_1)
-        );
+        // if (!serialPortService.connect(serialPortConfig.device, serialPortConfig.baudRate, serialPortConfig.timeout))
+        // {
+        //     return hardware_interface::CallbackReturn::ERROR;
+        // }
+
+        // serialPortService.BindRebelArmFeedbackCallback(
+        //     std::bind(&RebelArmHardwareInterface::rebelArmFeedbackCallback, this, std::placeholders::_1)
+        // );
 
         return hardware_interface::CallbackReturn::SUCCESS;
     }
 
     hardware_interface::CallbackReturn RebelArmHardwareInterface::on_cleanup(const rclcpp_lifecycle::State &)
     {
+         RCLCPP_INFO(rclcpp::get_logger("RebelArmHardwareInterface"), "Cleaning up... please wait a moment...");
+
+        // if (!serialPortService.disconnect())
+        // {
+        //     return hardware_interface::CallbackReturn::ERROR;
+        // }
+
         return hardware_interface::CallbackReturn::SUCCESS;
     }
 
@@ -143,22 +152,39 @@ namespace rebel_arm_hardware_interface
 
     hardware_interface::return_type RebelArmHardwareInterface::read(const rclcpp::Time &, const rclcpp::Duration &) // period
     {
+        // serialPortService.read();
+
         return hardware_interface::return_type::OK;
     }
 
     hardware_interface::return_type RebelArmHardwareInterface::write(const rclcpp::Time &, const rclcpp::Duration &)
     {
+        // RebelArmControl rebelArmControl;
+
+        // rebelArmControl.joint1_position = rebel_arm_joint1.command;
+        // rebelArmControl.joint2_position = rebel_arm_joint2.command;
+        // rebelArmControl.joint3_position = rebel_arm_joint3.command;
+        // rebelArmControl.joint4_position = rebel_arm_joint4.command;
+        // rebelArmControl.joint5_position = rebel_arm_joint5.command;
+        // rebelArmControl.joint6_position = rebel_arm_joint6.command;
+
+        // rebelArmControl.checksum = (uint16_t)(rebelArmControl.head ^ rebelArmControl.joint1_position ^ rebelArmControl.joint2_position
+        //     ^ rebelArmControl.joint3_position ^ rebelArmControl.joint4_position ^ rebelArmControl.joint5_position 
+        //     ^ rebelArmControl.joint6_position);
+
+        // serialPortService.write((const char*) &rebelArmControl, sizeof(RebelArmControl));
+
         return hardware_interface::return_type::OK;
     }
 
     void RebelArmHardwareInterface::rebelArmFeedbackCallback(RebelArmFeedback rebelArmFeedback) 
     {
-        rebel_arm_joint1.updatePosition(rebelArmFeedback.joint1_position);
-        rebel_arm_joint2.updatePosition(rebelArmFeedback.joint2_position);
-        rebel_arm_joint3.updatePosition(rebelArmFeedback.joint3_position);
-        rebel_arm_joint4.updatePosition(rebelArmFeedback.joint4_position);
-        rebel_arm_joint5.updatePosition(rebelArmFeedback.joint5_position);
-        rebel_arm_joint6.updatePosition(rebelArmFeedback.joint6_position);
+        // rebel_arm_joint1.updatePosition(rebelArmFeedback.joint1_position);
+        // rebel_arm_joint2.updatePosition(rebelArmFeedback.joint2_position);
+        // rebel_arm_joint3.updatePosition(rebelArmFeedback.joint3_position);
+        // rebel_arm_joint4.updatePosition(rebelArmFeedback.joint4_position);
+        // rebel_arm_joint5.updatePosition(rebelArmFeedback.joint5_position);
+        // rebel_arm_joint6.updatePosition(rebelArmFeedback.joint6_position);
     }
 }
 

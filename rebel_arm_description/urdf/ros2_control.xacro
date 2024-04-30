@@ -20,32 +20,32 @@
       </hardware>
 
       <joint name="position1_joint">
-        <command_interface name="position"/>
+        <command_interface name="command"/>
         <state_interface name="position"/>
       </joint>
 
       <joint name="position2_joint">
-        <command_interface name="position"/>
+        <command_interface name="command"/>
         <state_interface name="position"/>
       </joint>
 
       <joint name="position3_joint">
-        <command_interface name="position"/>
+        <command_interface name="command"/>
         <state_interface name="position"/>
       </joint>
 
       <joint name="position4_joint">
-        <command_interface name="position"/>
+        <command_interface name="command"/>
         <state_interface name="position"/>
       </joint>
 
       <joint name="position5_joint">
-        <command_interface name="position"/>
+        <command_interface name="command"/>
         <state_interface name="position"/>
       </joint>
 
       <joint name="position6_joint">
-        <command_interface name="position"/>
+        <command_interface name="command"/>
         <state_interface name="position"/>
       </joint>
     </ros2_control>
