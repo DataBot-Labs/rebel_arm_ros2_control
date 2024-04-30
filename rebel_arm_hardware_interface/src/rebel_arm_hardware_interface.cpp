@@ -114,6 +114,15 @@ namespace rebel_arm_hardware_interface
 
     hardware_interface::CallbackReturn RebelArmHardwareInterface::on_configure(const rclcpp_lifecycle::State &)
     {
+        if (!serialPortService.connect(serialPortConfig.device, serialPortConfig.baudRate, serialPortConfig.timeout))
+        {
+            return hardware_interface::CallbackReturn::ERROR;
+        }
+
+        serialPortService.BindRebelArmFeedbackCallback(
+            std::bind(&RebelArmHardwareInterface::rebelArmFeedbackCallback, this, std::placeholders::_1)
+        );
+
         return hardware_interface::CallbackReturn::SUCCESS;
     }
 
