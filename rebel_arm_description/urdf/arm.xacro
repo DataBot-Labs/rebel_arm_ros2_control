@@ -1,9 +1,9 @@
 <?xml version="1.0" ?>
 <robot name="arm" xmlns:xacro="http://www.ros.org/wiki/xacro">
 
-<xacro:include filename="$(find arm_description)/urdf/materials.xacro" />
-<xacro:include filename="$(find arm_description)/urdf/arm.trans" />
-<xacro:include filename="$(find arm_description)/urdf/arm.gazebo" />
+<xacro:include filename="$(find rebel_arm_description)/urdf/materials.xacro" />
+<xacro:include filename="$(find rebel_arm_description)/urdf/arm.trans" />
+<xacro:include filename="$(find rebel_arm_description)/urdf/arm.gazebo" />
 <link name="base_link">
   <inertial>
     <origin xyz="2.6758679619289235e-14 0.0 0.02266233904051618" rpy="0 0 0"/>
@@ -13,14 +13,14 @@
   <visual>
     <origin xyz="0 0 0" rpy="0 0 0"/>
     <geometry>
-      <mesh filename="file://$(find arm_description)/meshes/base_link.stl" scale="0.001 0.001 0.001"/>
+      <mesh filename="file://$(find rebel_arm_description)/meshes/base_link.stl" scale="0.001 0.001 0.001"/>
     </geometry>
     <material name="silver"/>
   </visual>
   <collision>
     <origin xyz="0 0 0" rpy="0 0 0"/>
     <geometry>
-      <mesh filename="file://$(find arm_description)/meshes/base_link.stl" scale="0.001 0.001 0.001"/>
+      <mesh filename="file://$(find rebel_arm_description)/meshes/base_link.stl" scale="0.001 0.001 0.001"/>
     </geometry>
   </collision>
 </link>
@@ -34,14 +34,14 @@
   <visual>
     <origin xyz="-0.0 -0.0 -0.09" rpy="0 0 0"/>
     <geometry>
-      <mesh filename="file://$(find arm_description)/meshes/pulley_c_v9_1.stl" scale="0.001 0.001 0.001"/>
+      <mesh filename="file://$(find rebel_arm_description)/meshes/pulley_c_v9_1.stl" scale="0.001 0.001 0.001"/>
     </geometry>
     <material name="silver"/>
   </visual>
   <collision>
     <origin xyz="-0.0 -0.0 -0.09" rpy="0 0 0"/>
     <geometry>
-      <mesh filename="file://$(find arm_description)/meshes/pulley_c_v9_1.stl" scale="0.001 0.001 0.001"/>
+      <mesh filename="file://$(find rebel_arm_description)/meshes/pulley_c_v9_1.stl" scale="0.001 0.001 0.001"/>
     </geometry>
   </collision>
 </link>
@@ -55,14 +55,14 @@
   <visual>
     <origin xyz="-0.0 -0.0 -0.123" rpy="0 0 0"/>
     <geometry>
-      <mesh filename="file://$(find arm_description)/meshes/shoulder_bearling_house_prt1_v14_1.stl" scale="0.001 0.001 0.001"/>
+      <mesh filename="file://$(find rebel_arm_description)/meshes/shoulder_bearling_house_prt1_v14_1.stl" scale="0.001 0.001 0.001"/>
     </geometry>
     <material name="silver"/>
   </visual>
   <collision>
     <origin xyz="-0.0 -0.0 -0.123" rpy="0 0 0"/>
     <geometry>
-      <mesh filename="file://$(find arm_description)/meshes/shoulder_bearling_house_prt1_v14_1.stl" scale="0.001 0.001 0.001"/>
+      <mesh filename="file://$(find rebel_arm_description)/meshes/shoulder_bearling_house_prt1_v14_1.stl" scale="0.001 0.001 0.001"/>
     </geometry>
   </collision>
 </link>
@@ -76,14 +76,14 @@
   <visual>
     <origin xyz="-0.0 -0.0 -0.1344" rpy="0 0 0"/>
     <geometry>
-      <mesh filename="file://$(find arm_description)/meshes/table1_v2_1.stl" scale="0.001 0.001 0.001"/>
+      <mesh filename="file://$(find rebel_arm_description)/meshes/table1_v2_1.stl" scale="0.001 0.001 0.001"/>
     </geometry>
     <material name="silver"/>
   </visual>
   <collision>
     <origin xyz="-0.0 -0.0 -0.1344" rpy="0 0 0"/>
     <geometry>
-      <mesh filename="file://$(find arm_description)/meshes/table1_v2_1.stl" scale="0.001 0.001 0.001"/>
+      <mesh filename="file://$(find rebel_arm_description)/meshes/table1_v2_1.stl" scale="0.001 0.001 0.001"/>
     </geometry>
   </collision>
 </link>
@@ -97,14 +97,14 @@
   <visual>
     <origin xyz="-0.0 -0.0 -0.1504" rpy="0 0 0"/>
     <geometry>
-      <mesh filename="file://$(find arm_description)/meshes/shoulder_bearling_house_prt3_v2_1.stl" scale="0.001 0.001 0.001"/>
+      <mesh filename="file://$(find rebel_arm_description)/meshes/shoulder_bearling_house_prt3_v2_1.stl" scale="0.001 0.001 0.001"/>
     </geometry>
     <material name="silver"/>
   </visual>
   <collision>
     <origin xyz="-0.0 -0.0 -0.1504" rpy="0 0 0"/>
     <geometry>
-      <mesh filename="file://$(find arm_description)/meshes/shoulder_bearling_house_prt3_v2_1.stl" scale="0.001 0.001 0.001"/>
+      <mesh filename="file://$(find rebel_arm_description)/meshes/shoulder_bearling_house_prt3_v2_1.stl" scale="0.001 0.001 0.001"/>
     </geometry>
   </collision>
 </link>
@@ -118,14 +118,14 @@
   <visual>
     <origin xyz="-0.05 0.095 -0.1504" rpy="0 0 0"/>
     <geometry>
-      <mesh filename="file://$(find arm_description)/meshes/shoulder_v2_1.stl" scale="0.001 0.001 0.001"/>
+      <mesh filename="file://$(find rebel_arm_description)/meshes/shoulder_v2_1.stl" scale="0.001 0.001 0.001"/>
     </geometry>
     <material name="silver"/>
   </visual>
   <collision>
     <origin xyz="-0.05 0.095 -0.1504" rpy="0 0 0"/>
     <geometry>
-      <mesh filename="file://$(find arm_description)/meshes/shoulder_v2_1.stl" scale="0.001 0.001 0.001"/>
+      <mesh filename="file://$(find rebel_arm_description)/meshes/shoulder_v2_1.stl" scale="0.001 0.001 0.001"/>
     </geometry>
   </collision>
 </link>
@@ -139,14 +139,14 @@
   <visual>
     <origin xyz="2.4e-05 0.097184 -0.1954" rpy="0 0 0"/>
     <geometry>
-      <mesh filename="file://$(find arm_description)/meshes/plangearbox1_v2_1.stl" scale="0.001 0.001 0.001"/>
+      <mesh filename="file://$(find rebel_arm_description)/meshes/plangearbox1_v2_1.stl" scale="0.001 0.001 0.001"/>
     </geometry>
     <material name="silver"/>
   </visual>
   <collision>
     <origin xyz="2.4e-05 0.097184 -0.1954" rpy="0 0 0"/>
     <geometry>
-      <mesh filename="file://$(find arm_description)/meshes/plangearbox1_v2_1.stl" scale="0.001 0.001 0.001"/>
+      <mesh filename="file://$(find rebel_arm_description)/meshes/plangearbox1_v2_1.stl" scale="0.001 0.001 0.001"/>
     </geometry>
   </collision>
 </link>
@@ -160,14 +160,14 @@
   <visual>
     <origin xyz="6.7e-05 0.013684 -0.1954" rpy="0 0 0"/>
     <geometry>
-      <mesh filename="file://$(find arm_description)/meshes/stepper1_v2_1.stl" scale="0.001 0.001 0.001"/>
+      <mesh filename="file://$(find rebel_arm_description)/meshes/stepper1_v2_1.stl" scale="0.001 0.001 0.001"/>
     </geometry>
     <material name="silver"/>
   </visual>
   <collision>
     <origin xyz="6.7e-05 0.013684 -0.1954" rpy="0 0 0"/>
     <geometry>
-      <mesh filename="file://$(find arm_description)/meshes/stepper1_v2_1.stl" scale="0.001 0.001 0.001"/>
+      <mesh filename="file://$(find rebel_arm_description)/meshes/stepper1_v2_1.stl" scale="0.001 0.001 0.001"/>
     </geometry>
   </collision>
 </link>
@@ -181,14 +181,14 @@
   <visual>
     <origin xyz="4.5e-05 0.055884 -0.2754" rpy="0 0 0"/>
     <geometry>
-      <mesh filename="file://$(find arm_description)/meshes/shoulder_bearling_house2_prt3_v3_1.stl" scale="0.001 0.001 0.001"/>
+      <mesh filename="file://$(find rebel_arm_description)/meshes/shoulder_bearling_house2_prt3_v3_1.stl" scale="0.001 0.001 0.001"/>
     </geometry>
     <material name="silver"/>
   </visual>
   <collision>
     <origin xyz="4.5e-05 0.055884 -0.2754" rpy="0 0 0"/>
     <geometry>
-      <mesh filename="file://$(find arm_description)/meshes/shoulder_bearling_house2_prt3_v3_1.stl" scale="0.001 0.001 0.001"/>
+      <mesh filename="file://$(find rebel_arm_description)/meshes/shoulder_bearling_house2_prt3_v3_1.stl" scale="0.001 0.001 0.001"/>
     </geometry>
   </collision>
 </link>
@@ -202,14 +202,14 @@
   <visual>
     <origin xyz="2.1e-05 0.102029 -0.2754" rpy="0 0 0"/>
     <geometry>
-      <mesh filename="file://$(find arm_description)/meshes/new_pipe_b_v8_1.stl" scale="0.001 0.001 0.001"/>
+      <mesh filename="file://$(find rebel_arm_description)/meshes/new_pipe_b_v8_1.stl" scale="0.001 0.001 0.001"/>
     </geometry>
     <material name="silver"/>
   </visual>
   <collision>
     <origin xyz="2.1e-05 0.102029 -0.2754" rpy="0 0 0"/>
     <geometry>
-      <mesh filename="file://$(find arm_description)/meshes/new_pipe_b_v8_1.stl" scale="0.001 0.001 0.001"/>
+      <mesh filename="file://$(find rebel_arm_description)/meshes/new_pipe_b_v8_1.stl" scale="0.001 0.001 0.001"/>
     </geometry>
   </collision>
 </link>
@@ -223,14 +223,14 @@
   <visual>
     <origin xyz="2.1e-05 0.102029 -0.2754" rpy="0 0 0"/>
     <geometry>
-      <mesh filename="file://$(find arm_description)/meshes/shoulder_bearling_house_2prt1_v5_1.stl" scale="0.001 0.001 0.001"/>
+      <mesh filename="file://$(find rebel_arm_description)/meshes/shoulder_bearling_house_2prt1_v5_1.stl" scale="0.001 0.001 0.001"/>
     </geometry>
     <material name="silver"/>
   </visual>
   <collision>
     <origin xyz="2.1e-05 0.102029 -0.2754" rpy="0 0 0"/>
     <geometry>
-      <mesh filename="file://$(find arm_description)/meshes/shoulder_bearling_house_2prt1_v5_1.stl" scale="0.001 0.001 0.001"/>
+      <mesh filename="file://$(find rebel_arm_description)/meshes/shoulder_bearling_house_2prt1_v5_1.stl" scale="0.001 0.001 0.001"/>
     </geometry>
   </collision>
 </link>
@@ -244,14 +244,14 @@
   <visual>
     <origin xyz="3e-05 0.085884 -0.2754" rpy="0 0 0"/>
     <geometry>
-      <mesh filename="file://$(find arm_description)/meshes/shoulder_bearling_house2_prt2_v10_1.stl" scale="0.001 0.001 0.001"/>
+      <mesh filename="file://$(find rebel_arm_description)/meshes/shoulder_bearling_house2_prt2_v10_1.stl" scale="0.001 0.001 0.001"/>
     </geometry>
     <material name="silver"/>
   </visual>
   <collision>
     <origin xyz="3e-05 0.085884 -0.2754" rpy="0 0 0"/>
     <geometry>
-      <mesh filename="file://$(find arm_description)/meshes/shoulder_bearling_house2_prt2_v10_1.stl" scale="0.001 0.001 0.001"/>
+      <mesh filename="file://$(find rebel_arm_description)/meshes/shoulder_bearling_house2_prt2_v10_1.stl" scale="0.001 0.001 0.001"/>
     </geometry>
   </collision>
 </link>
@@ -265,14 +265,14 @@
   <visual>
     <origin xyz="9.6e-05 -0.042971 -0.2754" rpy="0 0 0"/>
     <geometry>
-      <mesh filename="file://$(find arm_description)/meshes/tbone_v1_1.stl" scale="0.001 0.001 0.001"/>
+      <mesh filename="file://$(find rebel_arm_description)/meshes/tbone_v1_1.stl" scale="0.001 0.001 0.001"/>
     </geometry>
     <material name="silver"/>
   </visual>
   <collision>
     <origin xyz="9.6e-05 -0.042971 -0.2754" rpy="0 0 0"/>
     <geometry>
-      <mesh filename="file://$(find arm_description)/meshes/tbone_v1_1.stl" scale="0.001 0.001 0.001"/>
+      <mesh filename="file://$(find rebel_arm_description)/meshes/tbone_v1_1.stl" scale="0.001 0.001 0.001"/>
     </geometry>
   </collision>
 </link>
@@ -286,14 +286,14 @@
   <visual>
     <origin xyz="0.0002 -0.002971 -0.308202" rpy="0 0 0"/>
     <geometry>
-      <mesh filename="file://$(find arm_description)/meshes/pipe_c_v1_1.stl" scale="0.001 0.001 0.001"/>
+      <mesh filename="file://$(find rebel_arm_description)/meshes/pipe_c_v1_1.stl" scale="0.001 0.001 0.001"/>
     </geometry>
     <material name="silver"/>
   </visual>
   <collision>
     <origin xyz="0.0002 -0.002971 -0.308202" rpy="0 0 0"/>
     <geometry>
-      <mesh filename="file://$(find arm_description)/meshes/pipe_c_v1_1.stl" scale="0.001 0.001 0.001"/>
+      <mesh filename="file://$(find rebel_arm_description)/meshes/pipe_c_v1_1.stl" scale="0.001 0.001 0.001"/>
     </geometry>
   </collision>
 </link>
@@ -307,14 +307,14 @@
   <visual>
     <origin xyz="0.0002 -0.002971 -0.368202" rpy="0 0 0"/>
     <geometry>
-      <mesh filename="file://$(find arm_description)/meshes/table2_v1_1.stl" scale="0.001 0.001 0.001"/>
+      <mesh filename="file://$(find rebel_arm_description)/meshes/table2_v1_1.stl" scale="0.001 0.001 0.001"/>
     </geometry>
     <material name="silver"/>
   </visual>
   <collision>
     <origin xyz="0.0002 -0.002971 -0.368202" rpy="0 0 0"/>
     <geometry>
-      <mesh filename="file://$(find arm_description)/meshes/table2_v1_1.stl" scale="0.001 0.001 0.001"/>
+      <mesh filename="file://$(find rebel_arm_description)/meshes/table2_v1_1.stl" scale="0.001 0.001 0.001"/>
     </geometry>
   </collision>
 </link>
@@ -328,14 +328,14 @@
   <visual>
     <origin xyz="0.000157 0.081029 -0.398202" rpy="0 0 0"/>
     <geometry>
-      <mesh filename="file://$(find arm_description)/meshes/arm_plate_v2_1.stl" scale="0.001 0.001 0.001"/>
+      <mesh filename="file://$(find rebel_arm_description)/meshes/arm_plate_v2_1.stl" scale="0.001 0.001 0.001"/>
     </geometry>
     <material name="silver"/>
   </visual>
   <collision>
     <origin xyz="0.000157 0.081029 -0.398202" rpy="0 0 0"/>
     <geometry>
-      <mesh filename="file://$(find arm_description)/meshes/arm_plate_v2_1.stl" scale="0.001 0.001 0.001"/>
+      <mesh filename="file://$(find rebel_arm_description)/meshes/arm_plate_v2_1.stl" scale="0.001 0.001 0.001"/>
     </geometry>
   </collision>
 </link>
@@ -349,14 +349,14 @@
   <visual>
     <origin xyz="0.000156 0.082029 -0.628362" rpy="0 0 0"/>
     <geometry>
-      <mesh filename="file://$(find arm_description)/meshes/bearing_holder_elbow_v3_1.stl" scale="0.001 0.001 0.001"/>
+      <mesh filename="file://$(find rebel_arm_description)/meshes/bearing_holder_elbow_v3_1.stl" scale="0.001 0.001 0.001"/>
     </geometry>
     <material name="silver"/>
   </visual>
   <collision>
     <origin xyz="0.000156 0.082029 -0.628362" rpy="0 0 0"/>
     <geometry>
-      <mesh filename="file://$(find arm_description)/meshes/bearing_holder_elbow_v3_1.stl" scale="0.001 0.001 0.001"/>
+      <mesh filename="file://$(find rebel_arm_description)/meshes/bearing_holder_elbow_v3_1.stl" scale="0.001 0.001 0.001"/>
     </geometry>
   </collision>
 </link>
@@ -370,14 +370,14 @@
   <visual>
     <origin xyz="0.000151 0.091029 -0.628362" rpy="0 0 0"/>
     <geometry>
-      <mesh filename="file://$(find arm_description)/meshes/elbow_joint_axes_v5_1.stl" scale="0.001 0.001 0.001"/>
+      <mesh filename="file://$(find rebel_arm_description)/meshes/elbow_joint_axes_v5_1.stl" scale="0.001 0.001 0.001"/>
     </geometry>
     <material name="silver"/>
   </visual>
   <collision>
     <origin xyz="0.000151 0.091029 -0.628362" rpy="0 0 0"/>
     <geometry>
-      <mesh filename="file://$(find arm_description)/meshes/elbow_joint_axes_v5_1.stl" scale="0.001 0.001 0.001"/>
+      <mesh filename="file://$(find rebel_arm_description)/meshes/elbow_joint_axes_v5_1.stl" scale="0.001 0.001 0.001"/>
     </geometry>
   </collision>
 </link>
@@ -391,14 +391,14 @@
   <visual>
     <origin xyz="0.000174 0.047929 -0.628362" rpy="0 0 0"/>
     <geometry>
-      <mesh filename="file://$(find arm_description)/meshes/elbow_side_plate_v3_1.stl" scale="0.001 0.001 0.001"/>
+      <mesh filename="file://$(find rebel_arm_description)/meshes/elbow_side_plate_v3_1.stl" scale="0.001 0.001 0.001"/>
     </geometry>
     <material name="silver"/>
   </visual>
   <collision>
     <origin xyz="0.000174 0.047929 -0.628362" rpy="0 0 0"/>
     <geometry>
-      <mesh filename="file://$(find arm_description)/meshes/elbow_side_plate_v3_1.stl" scale="0.001 0.001 0.001"/>
+      <mesh filename="file://$(find rebel_arm_description)/meshes/elbow_side_plate_v3_1.stl" scale="0.001 0.001 0.001"/>
     </geometry>
   </collision>
 </link>
@@ -412,14 +412,14 @@
   <visual>
     <origin xyz="-0.075429 0.052391 -0.628362" rpy="0 0 0"/>
     <geometry>
-      <mesh filename="file://$(find arm_description)/meshes/elbow_pipe_holder_front_v1_1.stl" scale="0.001 0.001 0.001"/>
+      <mesh filename="file://$(find rebel_arm_description)/meshes/elbow_pipe_holder_front_v1_1.stl" scale="0.001 0.001 0.001"/>
     </geometry>
     <material name="silver"/>
   </visual>
   <collision>
     <origin xyz="-0.075429 0.052391 -0.628362" rpy="0 0 0"/>
     <geometry>
-      <mesh filename="file://$(find arm_description)/meshes/elbow_pipe_holder_front_v1_1.stl" scale="0.001 0.001 0.001"/>
+      <mesh filename="file://$(find rebel_arm_description)/meshes/elbow_pipe_holder_front_v1_1.stl" scale="0.001 0.001 0.001"/>
     </geometry>
   </collision>
 </link>
@@ -433,14 +433,14 @@
   <visual>
     <origin xyz="0.044573 0.050002 -0.628362" rpy="0 0 0"/>
     <geometry>
-      <mesh filename="file://$(find arm_description)/meshes/elbow_pipe_holder_rear_v1_1.stl" scale="0.001 0.001 0.001"/>
+      <mesh filename="file://$(find rebel_arm_description)/meshes/elbow_pipe_holder_rear_v1_1.stl" scale="0.001 0.001 0.001"/>
     </geometry>
     <material name="silver"/>
   </visual>
   <collision>
     <origin xyz="0.044573 0.050002 -0.628362" rpy="0 0 0"/>
     <geometry>
-      <mesh filename="file://$(find arm_description)/meshes/elbow_pipe_holder_rear_v1_1.stl" scale="0.001 0.001 0.001"/>
+      <mesh filename="file://$(find rebel_arm_description)/meshes/elbow_pipe_holder_rear_v1_1.stl" scale="0.001 0.001 0.001"/>
     </geometry>
   </collision>
 </link>
@@ -454,14 +454,14 @@
   <visual>
     <origin xyz="0.038602 -0.006274 -0.628362" rpy="0 0 0"/>
     <geometry>
-      <mesh filename="file://$(find arm_description)/meshes/pipe_under_arm_v2_1.stl" scale="0.001 0.001 0.001"/>
+      <mesh filename="file://$(find rebel_arm_description)/meshes/pipe_under_arm_v2_1.stl" scale="0.001 0.001 0.001"/>
     </geometry>
     <material name="silver"/>
   </visual>
   <collision>
     <origin xyz="0.038602 -0.006274 -0.628362" rpy="0 0 0"/>
     <geometry>
-      <mesh filename="file://$(find arm_description)/meshes/pipe_under_arm_v2_1.stl" scale="0.001 0.001 0.001"/>
+      <mesh filename="file://$(find rebel_arm_description)/meshes/pipe_under_arm_v2_1.stl" scale="0.001 0.001 0.001"/>
     </geometry>
   </collision>
 </link>
@@ -475,14 +475,14 @@
   <visual>
     <origin xyz="-0.181398 -0.006388 -0.628362" rpy="0 0 0"/>
     <geometry>
-      <mesh filename="file://$(find arm_description)/meshes/hand_joint_mount_plate_v3_1.stl" scale="0.001 0.001 0.001"/>
+      <mesh filename="file://$(find rebel_arm_description)/meshes/hand_joint_mount_plate_v3_1.stl" scale="0.001 0.001 0.001"/>
     </geometry>
     <material name="silver"/>
   </visual>
   <collision>
     <origin xyz="-0.181398 -0.006388 -0.628362" rpy="0 0 0"/>
     <geometry>
-      <mesh filename="file://$(find arm_description)/meshes/hand_joint_mount_plate_v3_1.stl" scale="0.001 0.001 0.001"/>
+      <mesh filename="file://$(find rebel_arm_description)/meshes/hand_joint_mount_plate_v3_1.stl" scale="0.001 0.001 0.001"/>
     </geometry>
   </collision>
 </link>
@@ -496,14 +496,14 @@
   <visual>
     <origin xyz="-0.187433 0.060609 -0.659562" rpy="0 0 0"/>
     <geometry>
-      <mesh filename="file://$(find arm_description)/meshes/hand_joint_side_plate_v4_1.stl" scale="0.001 0.001 0.001"/>
+      <mesh filename="file://$(find rebel_arm_description)/meshes/hand_joint_side_plate_v4_1.stl" scale="0.001 0.001 0.001"/>
     </geometry>
     <material name="silver"/>
   </visual>
   <collision>
     <origin xyz="-0.187433 0.060609 -0.659562" rpy="0 0 0"/>
     <geometry>
-      <mesh filename="file://$(find arm_description)/meshes/hand_joint_side_plate_v4_1.stl" scale="0.001 0.001 0.001"/>
+      <mesh filename="file://$(find rebel_arm_description)/meshes/hand_joint_side_plate_v4_1.stl" scale="0.001 0.001 0.001"/>
     </geometry>
   </collision>
 </link>
@@ -517,14 +517,14 @@
   <visual>
     <origin xyz="-0.264826 0.05557 -0.627062" rpy="0 0 0"/>
     <geometry>
-      <mesh filename="file://$(find arm_description)/meshes/tool_joint_bearing_holders_v4_1.stl" scale="0.001 0.001 0.001"/>
+      <mesh filename="file://$(find rebel_arm_description)/meshes/tool_joint_bearing_holders_v4_1.stl" scale="0.001 0.001 0.001"/>
     </geometry>
     <material name="silver"/>
   </visual>
   <collision>
     <origin xyz="-0.264826 0.05557 -0.627062" rpy="0 0 0"/>
     <geometry>
-      <mesh filename="file://$(find arm_description)/meshes/tool_joint_bearing_holders_v4_1.stl" scale="0.001 0.001 0.001"/>
+      <mesh filename="file://$(find rebel_arm_description)/meshes/tool_joint_bearing_holders_v4_1.stl" scale="0.001 0.001 0.001"/>
     </geometry>
   </collision>
 </link>
@@ -538,14 +538,14 @@
   <visual>
     <origin xyz="-0.264812 0.02757 -0.627062" rpy="0 0 0"/>
     <geometry>
-      <mesh filename="file://$(find arm_description)/meshes/tool_joint_motor_side_plate_right_v1_1.stl" scale="0.001 0.001 0.001"/>
+      <mesh filename="file://$(find rebel_arm_description)/meshes/tool_joint_motor_side_plate_right_v1_1.stl" scale="0.001 0.001 0.001"/>
     </geometry>
     <material name="silver"/>
   </visual>
   <collision>
     <origin xyz="-0.264812 0.02757 -0.627062" rpy="0 0 0"/>
     <geometry>
-      <mesh filename="file://$(find arm_description)/meshes/tool_joint_motor_side_plate_right_v1_1.stl" scale="0.001 0.001 0.001"/>
+      <mesh filename="file://$(find rebel_arm_description)/meshes/tool_joint_motor_side_plate_right_v1_1.stl" scale="0.001 0.001 0.001"/>
     </geometry>
   </collision>
 </link>
@@ -559,14 +559,14 @@
   <visual>
     <origin xyz="-0.264808 0.01957 -0.627062" rpy="0 0 0"/>
     <geometry>
-      <mesh filename="file://$(find arm_description)/meshes/tool_joint_motor_side_plate_left_v6_1.stl" scale="0.001 0.001 0.001"/>
+      <mesh filename="file://$(find rebel_arm_description)/meshes/tool_joint_motor_side_plate_left_v6_1.stl" scale="0.001 0.001 0.001"/>
     </geometry>
     <material name="silver"/>
   </visual>
   <collision>
     <origin xyz="-0.264808 0.01957 -0.627062" rpy="0 0 0"/>
     <geometry>
-      <mesh filename="file://$(find arm_description)/meshes/tool_joint_motor_side_plate_left_v6_1.stl" scale="0.001 0.001 0.001"/>
+      <mesh filename="file://$(find rebel_arm_description)/meshes/tool_joint_motor_side_plate_left_v6_1.stl" scale="0.001 0.001 0.001"/>
     </geometry>
   </collision>
 </link>
@@ -580,14 +580,14 @@
   <visual>
     <origin xyz="-0.284866 0.016559 -0.539562" rpy="0 0 0"/>
     <geometry>
-      <mesh filename="file://$(find arm_description)/meshes/tool_joint_motor_plate_v1_1.stl" scale="0.001 0.001 0.001"/>
+      <mesh filename="file://$(find rebel_arm_description)/meshes/tool_joint_motor_plate_v1_1.stl" scale="0.001 0.001 0.001"/>
     </geometry>
     <material name="silver"/>
   </visual>
   <collision>
     <origin xyz="-0.284866 0.016559 -0.539562" rpy="0 0 0"/>
     <geometry>
-      <mesh filename="file://$(find arm_description)/meshes/tool_joint_motor_plate_v1_1.stl" scale="0.001 0.001 0.001"/>
+      <mesh filename="file://$(find rebel_arm_description)/meshes/tool_joint_motor_plate_v1_1.stl" scale="0.001 0.001 0.001"/>
     </geometry>
   </collision>
 </link>
@@ -601,14 +601,14 @@
   <visual>
     <origin xyz="0.087 0.0 -0.1344" rpy="0 0 0"/>
     <geometry>
-      <mesh filename="file://$(find arm_description)/meshes/stepper_motor1_v3_1.stl" scale="0.001 0.001 0.001"/>
+      <mesh filename="file://$(find rebel_arm_description)/meshes/stepper_motor1_v3_1.stl" scale="0.001 0.001 0.001"/>
     </geometry>
     <material name="silver"/>
   </visual>
   <collision>
     <origin xyz="0.087 0.0 -0.1344" rpy="0 0 0"/>
     <geometry>
-      <mesh filename="file://$(find arm_description)/meshes/stepper_motor1_v3_1.stl" scale="0.001 0.001 0.001"/>
+      <mesh filename="file://$(find rebel_arm_description)/meshes/stepper_motor1_v3_1.stl" scale="0.001 0.001 0.001"/>
     </geometry>
   </collision>
 </link>
@@ -622,14 +622,14 @@
   <visual>
     <origin xyz="0.087 0.0 -0.0979" rpy="0 0 0"/>
     <geometry>
-      <mesh filename="file://$(find arm_description)/meshes/pulley_a_v1_1.stl" scale="0.001 0.001 0.001"/>
+      <mesh filename="file://$(find rebel_arm_description)/meshes/pulley_a_v1_1.stl" scale="0.001 0.001 0.001"/>
     </geometry>
     <material name="silver"/>
   </visual>
   <collision>
     <origin xyz="0.087 0.0 -0.0979" rpy="0 0 0"/>
     <geometry>
-      <mesh filename="file://$(find arm_description)/meshes/pulley_a_v1_1.stl" scale="0.001 0.001 0.001"/>
+      <mesh filename="file://$(find rebel_arm_description)/meshes/pulley_a_v1_1.stl" scale="0.001 0.001 0.001"/>
     </geometry>
   </collision>
 </link>
@@ -643,14 +643,14 @@
   <visual>
     <origin xyz="0.000156 0.082029 -0.453202" rpy="0 0 0"/>
     <geometry>
-      <mesh filename="file://$(find arm_description)/meshes/stepper_motor2_v1_1.stl" scale="0.001 0.001 0.001"/>
+      <mesh filename="file://$(find rebel_arm_description)/meshes/stepper_motor2_v1_1.stl" scale="0.001 0.001 0.001"/>
     </geometry>
     <material name="silver"/>
   </visual>
   <collision>
     <origin xyz="0.000156 0.082029 -0.453202" rpy="0 0 0"/>
     <geometry>
-      <mesh filename="file://$(find arm_description)/meshes/stepper_motor2_v1_1.stl" scale="0.001 0.001 0.001"/>
+      <mesh filename="file://$(find rebel_arm_description)/meshes/stepper_motor2_v1_1.stl" scale="0.001 0.001 0.001"/>
     </geometry>
   </collision>
 </link>
@@ -664,14 +664,14 @@
   <visual>
     <origin xyz="0.053602 -0.006267 -0.628362" rpy="0 0 0"/>
     <geometry>
-      <mesh filename="file://$(find arm_description)/meshes/stepper_motor3_v1_1.stl" scale="0.001 0.001 0.001"/>
+      <mesh filename="file://$(find rebel_arm_description)/meshes/stepper_motor3_v1_1.stl" scale="0.001 0.001 0.001"/>
     </geometry>
     <material name="silver"/>
   </visual>
   <collision>
     <origin xyz="0.053602 -0.006267 -0.628362" rpy="0 0 0"/>
     <geometry>
-      <mesh filename="file://$(find arm_description)/meshes/stepper_motor3_v1_1.stl" scale="0.001 0.001 0.001"/>
+      <mesh filename="file://$(find rebel_arm_description)/meshes/stepper_motor3_v1_1.stl" scale="0.001 0.001 0.001"/>
     </geometry>
   </collision>
 </link>
@@ -685,14 +685,14 @@
   <visual>
     <origin xyz="0.049602 -0.006402 -0.682112" rpy="0 0 0"/>
     <geometry>
-      <mesh filename="file://$(find arm_description)/meshes/stepper_motor4_v1_1.stl" scale="0.001 0.001 0.001"/>
+      <mesh filename="file://$(find rebel_arm_description)/meshes/stepper_motor4_v1_1.stl" scale="0.001 0.001 0.001"/>
     </geometry>
     <material name="silver"/>
   </visual>
   <collision>
     <origin xyz="0.049602 -0.006402 -0.682112" rpy="0 0 0"/>
     <geometry>
-      <mesh filename="file://$(find arm_description)/meshes/stepper_motor4_v1_1.stl" scale="0.001 0.001 0.001"/>
+      <mesh filename="file://$(find rebel_arm_description)/meshes/stepper_motor4_v1_1.stl" scale="0.001 0.001 0.001"/>
     </geometry>
   </collision>
 </link>
@@ -706,14 +706,14 @@
   <visual>
     <origin xyz="-0.264839 -0.009113 -0.537062" rpy="0 0 0"/>
     <geometry>
-      <mesh filename="file://$(find arm_description)/meshes/stepper_motor6_v1_1.stl" scale="0.001 0.001 0.001"/>
+      <mesh filename="file://$(find rebel_arm_description)/meshes/stepper_motor6_v1_1.stl" scale="0.001 0.001 0.001"/>
     </geometry>
     <material name="silver"/>
   </visual>
   <collision>
     <origin xyz="-0.264839 -0.009113 -0.537062" rpy="0 0 0"/>
     <geometry>
-      <mesh filename="file://$(find arm_description)/meshes/stepper_motor6_v1_1.stl" scale="0.001 0.001 0.001"/>
+      <mesh filename="file://$(find rebel_arm_description)/meshes/stepper_motor6_v1_1.stl" scale="0.001 0.001 0.001"/>
     </geometry>
   </collision>
 </link>
@@ -727,14 +727,14 @@
   <visual>
     <origin xyz="0.038602 -0.006274 -0.628362" rpy="0 0 0"/>
     <geometry>
-      <mesh filename="file://$(find arm_description)/meshes/pulley_c3_v1_1.stl" scale="0.001 0.001 0.001"/>
+      <mesh filename="file://$(find rebel_arm_description)/meshes/pulley_c3_v1_1.stl" scale="0.001 0.001 0.001"/>
     </geometry>
     <material name="silver"/>
   </visual>
   <collision>
     <origin xyz="0.038602 -0.006274 -0.628362" rpy="0 0 0"/>
     <geometry>
-      <mesh filename="file://$(find arm_description)/meshes/pulley_c3_v1_1.stl" scale="0.001 0.001 0.001"/>
+      <mesh filename="file://$(find rebel_arm_description)/meshes/pulley_c3_v1_1.stl" scale="0.001 0.001 0.001"/>
     </geometry>
   </collision>
 </link>
@@ -748,14 +748,14 @@
   <visual>
     <origin xyz="9e-06 0.127029 -0.2754" rpy="0 0 0"/>
     <geometry>
-      <mesh filename="file://$(find arm_description)/meshes/pulley_c2_v1_1.stl" scale="0.001 0.001 0.001"/>
+      <mesh filename="file://$(find rebel_arm_description)/meshes/pulley_c2_v1_1.stl" scale="0.001 0.001 0.001"/>
     </geometry>
     <material name="silver"/>
   </visual>
   <collision>
     <origin xyz="9e-06 0.127029 -0.2754" rpy="0 0 0"/>
     <geometry>
-      <mesh filename="file://$(find arm_description)/meshes/pulley_c2_v1_1.stl" scale="0.001 0.001 0.001"/>
+      <mesh filename="file://$(find rebel_arm_description)/meshes/pulley_c2_v1_1.stl" scale="0.001 0.001 0.001"/>
     </geometry>
   </collision>
 </link>
@@ -769,14 +769,14 @@
   <visual>
     <origin xyz="8e-06 0.127184 -0.1954" rpy="0 0 0"/>
     <geometry>
-      <mesh filename="file://$(find arm_description)/meshes/pulley_2_v1_1.stl" scale="0.001 0.001 0.001"/>
+      <mesh filename="file://$(find rebel_arm_description)/meshes/pulley_2_v1_1.stl" scale="0.001 0.001 0.001"/>
     </geometry>
     <material name="silver"/>
   </visual>
   <collision>
     <origin xyz="8e-06 0.127184 -0.1954" rpy="0 0 0"/>
     <geometry>
-      <mesh filename="file://$(find arm_description)/meshes/pulley_2_v1_1.stl" scale="0.001 0.001 0.001"/>
+      <mesh filename="file://$(find rebel_arm_description)/meshes/pulley_2_v1_1.stl" scale="0.001 0.001 0.001"/>
     </geometry>
   </collision>
 </link>
@@ -790,14 +790,14 @@
   <visual>
     <origin xyz="0.000147 0.100529 -0.453202" rpy="0 0 0"/>
     <geometry>
-      <mesh filename="file://$(find arm_description)/meshes/pulley_3_v1_1.stl" scale="0.001 0.001 0.001"/>
+      <mesh filename="file://$(find rebel_arm_description)/meshes/pulley_3_v1_1.stl" scale="0.001 0.001 0.001"/>
     </geometry>
     <material name="silver"/>
   </visual>
   <collision>
     <origin xyz="0.000147 0.100529 -0.453202" rpy="0 0 0"/>
     <geometry>
-      <mesh filename="file://$(find arm_description)/meshes/pulley_3_v1_1.stl" scale="0.001 0.001 0.001"/>
+      <mesh filename="file://$(find rebel_arm_description)/meshes/pulley_3_v1_1.stl" scale="0.001 0.001 0.001"/>
     </geometry>
   </collision>
 </link>
@@ -811,14 +811,14 @@
   <visual>
     <origin xyz="0.000151 0.091029 -0.628362" rpy="0 0 0"/>
     <geometry>
-      <mesh filename="file://$(find arm_description)/meshes/pulley_4_v1_1.stl" scale="0.001 0.001 0.001"/>
+      <mesh filename="file://$(find rebel_arm_description)/meshes/pulley_4_v1_1.stl" scale="0.001 0.001 0.001"/>
     </geometry>
     <material name="silver"/>
   </visual>
   <collision>
     <origin xyz="0.000151 0.091029 -0.628362" rpy="0 0 0"/>
     <geometry>
-      <mesh filename="file://$(find arm_description)/meshes/pulley_4_v1_1.stl" scale="0.001 0.001 0.001"/>
+      <mesh filename="file://$(find rebel_arm_description)/meshes/pulley_4_v1_1.stl" scale="0.001 0.001 0.001"/>
     </geometry>
   </collision>
 </link>
@@ -832,14 +832,14 @@
   <visual>
     <origin xyz="0.020102 -0.006418 -0.682112" rpy="0 0 0"/>
     <geometry>
-      <mesh filename="file://$(find arm_description)/meshes/pulley_b_v2_1.stl" scale="0.001 0.001 0.001"/>
+      <mesh filename="file://$(find rebel_arm_description)/meshes/pulley_b_v2_1.stl" scale="0.001 0.001 0.001"/>
     </geometry>
     <material name="silver"/>
   </visual>
   <collision>
     <origin xyz="0.020102 -0.006418 -0.682112" rpy="0 0 0"/>
     <geometry>
-      <mesh filename="file://$(find arm_description)/meshes/pulley_b_v2_1.stl" scale="0.001 0.001 0.001"/>
+      <mesh filename="file://$(find rebel_arm_description)/meshes/pulley_b_v2_1.stl" scale="0.001 0.001 0.001"/>
     </geometry>
   </collision>
 </link>
@@ -853,14 +853,14 @@
   <visual>
     <origin xyz="-0.2148 0.005595 -0.627062" rpy="0 0 0"/>
     <geometry>
-      <mesh filename="file://$(find arm_description)/meshes/pulley_5_v1_1.stl" scale="0.001 0.001 0.001"/>
+      <mesh filename="file://$(find rebel_arm_description)/meshes/pulley_5_v1_1.stl" scale="0.001 0.001 0.001"/>
     </geometry>
     <material name="silver"/>
   </visual>
   <collision>
     <origin xyz="-0.2148 0.005595 -0.627062" rpy="0 0 0"/>
     <geometry>
-      <mesh filename="file://$(find arm_description)/meshes/pulley_5_v1_1.stl" scale="0.001 0.001 0.001"/>
+      <mesh filename="file://$(find rebel_arm_description)/meshes/pulley_5_v1_1.stl" scale="0.001 0.001 0.001"/>
     </geometry>
   </collision>
 </link>
@@ -874,14 +874,14 @@
   <visual>
     <origin xyz="-0.264824 0.05167 -0.627062" rpy="0 0 0"/>
     <geometry>
-      <mesh filename="file://$(find arm_description)/meshes/pulley_6_v1_1.stl" scale="0.001 0.001 0.001"/>
+      <mesh filename="file://$(find rebel_arm_description)/meshes/pulley_6_v1_1.stl" scale="0.001 0.001 0.001"/>
     </geometry>
     <material name="silver"/>
   </visual>
   <collision>
     <origin xyz="-0.264824 0.05167 -0.627062" rpy="0 0 0"/>
     <geometry>
-      <mesh filename="file://$(find arm_description)/meshes/pulley_6_v1_1.stl" scale="0.001 0.001 0.001"/>
+      <mesh filename="file://$(find rebel_arm_description)/meshes/pulley_6_v1_1.stl" scale="0.001 0.001 0.001"/>
     </geometry>
   </collision>
 </link>
@@ -895,14 +895,14 @@
   <visual>
     <origin xyz="-0.264839 -0.009113 -0.526662" rpy="0 0 0"/>
     <geometry>
-      <mesh filename="file://$(find arm_description)/meshes/end_effector_v1_1.stl" scale="0.001 0.001 0.001"/>
+      <mesh filename="file://$(find rebel_arm_description)/meshes/end_effector_v1_1.stl" scale="0.001 0.001 0.001"/>
     </geometry>
     <material name="silver"/>
   </visual>
   <collision>
     <origin xyz="-0.264839 -0.009113 -0.526662" rpy="0 0 0"/>
     <geometry>
-      <mesh filename="file://$(find arm_description)/meshes/end_effector_v1_1.stl" scale="0.001 0.001 0.001"/>
+      <mesh filename="file://$(find rebel_arm_description)/meshes/end_effector_v1_1.stl" scale="0.001 0.001 0.001"/>
     </geometry>
   </collision>
 </link>
@@ -916,14 +916,14 @@
   <visual>
     <origin xyz="-0.0 -0.0 -0.0" rpy="0 0 0"/>
     <geometry>
-      <mesh filename="file://$(find arm_description)/meshes/pipe_a_v3_1.stl" scale="0.001 0.001 0.001"/>
+      <mesh filename="file://$(find rebel_arm_description)/meshes/pipe_a_v3_1.stl" scale="0.001 0.001 0.001"/>
     </geometry>
     <material name="silver"/>
   </visual>
   <collision>
     <origin xyz="-0.0 -0.0 -0.0" rpy="0 0 0"/>
     <geometry>
-      <mesh filename="file://$(find arm_description)/meshes/pipe_a_v3_1.stl" scale="0.001 0.001 0.001"/>
+      <mesh filename="file://$(find rebel_arm_description)/meshes/pipe_a_v3_1.stl" scale="0.001 0.001 0.001"/>
     </geometry>
   </collision>
 </link>
@@ -937,14 +937,14 @@
   <visual>
     <origin xyz="-0.0 -0.0 -0.1144" rpy="0 0 0"/>
     <geometry>
-      <mesh filename="file://$(find arm_description)/meshes/shoulder_bearling_house_prt2_v1_1.stl" scale="0.001 0.001 0.001"/>
+      <mesh filename="file://$(find rebel_arm_description)/meshes/shoulder_bearling_house_prt2_v1_1.stl" scale="0.001 0.001 0.001"/>
     </geometry>
     <material name="silver"/>
   </visual>
   <collision>
     <origin xyz="-0.0 -0.0 -0.1144" rpy="0 0 0"/>
     <geometry>
-      <mesh filename="file://$(find arm_description)/meshes/shoulder_bearling_house_prt2_v1_1.stl" scale="0.001 0.001 0.001"/>
+      <mesh filename="file://$(find rebel_arm_description)/meshes/shoulder_bearling_house_prt2_v1_1.stl" scale="0.001 0.001 0.001"/>
     </geometry>
   </collision>
 </link>

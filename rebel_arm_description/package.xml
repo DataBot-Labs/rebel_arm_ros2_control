@@ -3,7 +3,7 @@
 <package format="3">
   <name>rebel_arm_description</name>
   <version>0.0.0</version>
-  <description>The arm_description package</description>
+  <description>The rebel_arm_description package</description>
   <maintainer email="todo@todo.com">author</maintainer>
   <license>TODO: License declaration</license>
 
