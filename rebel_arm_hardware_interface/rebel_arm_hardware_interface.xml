@@ -1,0 +1,9 @@
+<library path="rebel_arm_hardware_interface">
+    <class name="rebel_arm_hardware_interface/RebelArmHardwareInterface"
+           type="rebel_arm_hardware_interface::RebelArmHardwareInterface"
+           base_class_type="hardware_interface::SystemInterface">
+      <description>
+        The ROS2 Control hardware interface package for Rebel Arm robotic arm
+      </description>
+    </class>
+</library>
