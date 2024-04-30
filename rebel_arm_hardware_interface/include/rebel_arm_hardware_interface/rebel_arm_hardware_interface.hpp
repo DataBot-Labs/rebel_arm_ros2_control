@@ -21,10 +21,22 @@
 #include "hardware_interface/types/hardware_interface_type_values.hpp"
 #include "pluginlib/class_list_macros.hpp"
 
+#include "serial_port_service.hpp"
+
 namespace rebel_arm_hardware_interface
 {
     class RebelArmHardwareInterface : public hardware_interface::SystemInterface
     {
+        struct HardwareConfig
+        {
+            std::string position1JointName = "position1_joint";
+            std::string position2JointName = "position2_joint";
+            std::string position3JointName = "position3_joint";
+            std::string position4JointName = "position4_joint";
+            std::string position5JointName = "position5_joint";
+            std::string position6JointName = "position6_joint";
+        };
+
         struct SerialPortConfig
         {
             std::string device = "/dev/ttyUSB0";
@@ -54,5 +66,12 @@ namespace rebel_arm_hardware_interface
         hardware_interface::return_type write(const rclcpp::Time &, const rclcpp::Duration &) override;
 
         // void feedbackCallback(MotorWheelFeedback);
+
+        private:
+
+        SerialPortService serialPortService;
+
+        HardwareConfig hardwareConfig;
+        SerialPortConfig serialPortConfig;
     };
 }

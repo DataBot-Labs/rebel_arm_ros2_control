@@ -4,6 +4,8 @@
 <xacro:include filename="$(find rebel_arm_description)/urdf/materials.xacro" />
 <xacro:include filename="$(find rebel_arm_description)/urdf/arm.trans" />
 <xacro:include filename="$(find rebel_arm_description)/urdf/arm.gazebo" />
+<xacro:include filename="$(find rebel_arm_description)/urdf/ros2_control.xacro" />
+
 <link name="base_link">
   <inertial>
     <origin xyz="2.6758679619289235e-14 0.0 0.02266233904051618" rpy="0 0 0"/>
@@ -1218,5 +1220,7 @@
   <parent link="shoulder_bearling_house_prt1_v14_1"/>
   <child link="shoulder_bearling_house_prt2_v1_1"/>
 </joint>
+
+<xacro:rebel_arm_ros2_control name="RebelArm" />
 
 </robot>

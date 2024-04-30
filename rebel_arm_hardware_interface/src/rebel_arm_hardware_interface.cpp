@@ -22,6 +22,58 @@ namespace rebel_arm_hardware_interface
             return hardware_interface::CallbackReturn::ERROR;
         }
 
+        hardwareConfig.position1JointName = info.hardware_parameters.at("position1_joint_name");
+        hardwareConfig.position2JointName = info.hardware_parameters.at("position2_joint_name");
+        hardwareConfig.position3JointName = info.hardware_parameters.at("position3_joint_name");
+        hardwareConfig.position4JointName = info.hardware_parameters.at("position4_joint_name");
+        hardwareConfig.position5JointName = info.hardware_parameters.at("position5_joint_name");
+        hardwareConfig.position6JointName = info.hardware_parameters.at("position6_joint_name");
+
+        serialPortConfig.device = info.hardware_parameters.at("device");
+        serialPortConfig.baudRate = std::stoi(info.hardware_parameters.at("baud_rate"));
+        serialPortConfig.timeout = std::stoi(info.hardware_parameters.at("timeout"));
+
+        for (const hardware_interface::ComponentInfo & joint : info.joints)
+        {
+            if (joint.command_interfaces.size() != 1)
+            {
+                RCLCPP_FATAL(
+                    rclcpp::get_logger("RebelArmHardwareInterface"),
+                    "Joint '%s' has %zu command interfaces found. 1 expected.", joint.name.c_str(), joint.command_interfaces.size());
+
+                return hardware_interface::CallbackReturn::ERROR;
+            }
+
+            if (joint.command_interfaces[0].name != hardware_interface::HW_IF_POSITION)
+            {
+                RCLCPP_FATAL(
+                    rclcpp::get_logger("RebelArmHardwareInterface"),
+                    "Joint '%s' have %s command interfaces found. '%s' expected.", joint.name.c_str(),
+                    joint.command_interfaces[0].name.c_str(), hardware_interface::HW_IF_POSITION);
+                
+                return hardware_interface::CallbackReturn::ERROR;
+            }
+
+            if (joint.state_interfaces.size() != 1)
+            {
+                RCLCPP_FATAL(
+                    rclcpp::get_logger("RebelArmHardwareInterface"),
+                    "Joint '%s' has %zu state interface. 1 expected.", joint.name.c_str(), joint.state_interfaces.size());
+                
+                return hardware_interface::CallbackReturn::ERROR;
+            }
+
+            if (joint.state_interfaces[0].name != hardware_interface::HW_IF_POSITION)
+            {
+                RCLCPP_FATAL(
+                    rclcpp::get_logger("RebelArmHardwareInterface"),
+                    "Joint '%s' have %s command interfaces found. '%s' expected.", joint.name.c_str(),
+                    joint.state_interfaces[0].name.c_str(), hardware_interface::HW_IF_POSITION);
+                
+                return hardware_interface::CallbackReturn::ERROR;
+            }
+        }
+
         return hardware_interface::CallbackReturn::SUCCESS;
     }
 

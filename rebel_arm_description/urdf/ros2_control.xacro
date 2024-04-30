@@ -1,0 +1,55 @@
+<?xml version="1.0"?>
+<robot xmlns:xacro="http://www.ros.org/wiki/xacro">
+
+  <xacro:macro name="rebel_arm_ros2_control" params="name">
+
+    <ros2_control name="${name}" type="system">
+      <hardware>
+        <plugin>rebel_arm_hardware_interface/RebelArmHardwareInterface</plugin>
+        <param name="position1_joint_name">position1_joint</param>
+        <param name="position2_joint_name">position2_joint</param>
+        <param name="position3_joint_name">position3_joint</param>
+        <param name="position4_joint_name">position4_joint</param>
+        <param name="position5_joint_name">position5_joint</param>
+        <param name="position6_joint_name">position6_joint</param>
+
+        <param name="loop_rate">50</param>
+        <param name="device">/dev/ttyUSB0</param>
+        <param name="baud_rate">9600</param>
+        <param name="timeout">1000</param>
+      </hardware>
+
+      <joint name="position1_joint">
+        <command_interface name="position"/>
+        <state_interface name="position"/>
+      </joint>
+
+      <joint name="position2_joint">
+        <command_interface name="position"/>
+        <state_interface name="position"/>
+      </joint>
+
+      <joint name="position3_joint">
+        <command_interface name="position"/>
+        <state_interface name="position"/>
+      </joint>
+
+      <joint name="position4_joint">
+        <command_interface name="position"/>
+        <state_interface name="position"/>
+      </joint>
+
+      <joint name="position5_joint">
+        <command_interface name="position"/>
+        <state_interface name="position"/>
+      </joint>
+
+      <joint name="position6_joint">
+        <command_interface name="position"/>
+        <state_interface name="position"/>
+      </joint>
+    </ros2_control>
+
+  </xacro:macro>
+
+</robot>

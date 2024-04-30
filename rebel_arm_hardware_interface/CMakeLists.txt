@@ -15,6 +15,11 @@ find_package(Boost REQUIRED COMPONENTS system) # thread regex
 ament_auto_find_build_dependencies()
 
 ament_auto_add_library(
+  serial_port_service SHARED
+  src/serial_port_service.cpp
+)
+
+ament_auto_add_library(
   ${PROJECT_NAME} SHARED
   src/rebel_arm_hardware_interface.cpp
 )
